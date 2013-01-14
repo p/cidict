@@ -23,6 +23,8 @@ class cidict(dict):
     def __contains__(self, key):
         return super(cidict, self).__contains__(key.lower())
     
+    has_key = __contains__
+    
     def update(self, other):
         for key in other:
             # uses our __setitem__, no need to lower() here
