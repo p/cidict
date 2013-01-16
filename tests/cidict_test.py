@@ -59,3 +59,16 @@ class CidictTest(unittest.TestCase):
         assert 'FOO' in d
         assert 'bar' in d
         assert 'BAR' in d
+    
+    def test_missing_keys(self):
+        d = cidict.cidict(foo=1)
+        assert 'foo' in d
+        assert 'bar' not in d
+        
+        self.assertEqual(1, d['foo'])
+        try:
+            d['bar']
+        except KeyError:
+            pass
+        else:
+            self.fail('Expected KeyError to be raised')
