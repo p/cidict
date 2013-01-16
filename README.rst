@@ -9,7 +9,20 @@ into a separate package.
 
 This is a work in progress.
 
+Tests
+-----
+
+Run with ``nose``.
+
 .. image:: https://api.travis-ci.org/p/cidict.png
   :target: https://travis-ci.org/p/cidict
 
-Released under the MIT license.
+License
+-------
+
+MIT.
+
+References
+----------
+
+- http://docs.python.org/2/library/stdtypes.html#mapping-types-dict
